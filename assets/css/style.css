@@ -372,133 +372,7 @@ p {
 }
 
 /* :: Loading */
-.loading {
-    position: fixed;
-    background-color: #FFF;
-    left: 0;
-    top: 0;
-    z-index: 99999;
-    width: 100%;
-    height: 100%;
-    -webkit-transition: unset;
-    -o-transition: unset;
-    transition: unset;
-}
-.loading .loading-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%) scale(0.8);
-    -ms-transform: translate(-50%, -50%) scale(0.8);
-    transform: translate(-50%, -50%) scale(0.8);
-}
-.loading .lds-roller {
-    display: inline-block;
-    position: relative;
-    width: 100px;
-    height: 100px;
-}
-.loading .lds-roller div {
-    -webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-            animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    -webkit-transform-origin: 40px 40px;
-        -ms-transform-origin: 40px 40px;
-            transform-origin: 40px 40px;
-}
-.loading .lds-roller div:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #F57009;
-    margin: -5px 0 0 -5px;
-}
-.loading .lds-roller div:nth-child(1) {
-    -webkit-animation-delay: -0.036s;
-            animation-delay: -0.036s;
-}
-.loading .lds-roller div:nth-child(1):after {
-    top: 63px;
-    left: 63px;
-}
-.loading .lds-roller div:nth-child(2) {
-    -webkit-animation-delay: -0.072s;
-            animation-delay: -0.072s;
-}
-.loading .lds-roller div:nth-child(2):after {
-    top: 68px;
-    left: 56px;
-}
-.loading .lds-roller div:nth-child(3) {
-    -webkit-animation-delay: -0.108s;
-            animation-delay: -0.108s;
-}
-.loading .lds-roller div:nth-child(3):after {
-    top: 71px;
-    left: 48px;
-}
-.loading .lds-roller div:nth-child(4) {
-    -webkit-animation-delay: -0.144s;
-            animation-delay: -0.144s;
-}
-.loading .lds-roller div:nth-child(4):after {
-    top: 72px;
-    left: 40px;
-}
-.loading .lds-roller div:nth-child(5) {
-    -webkit-animation-delay: -0.18s;
-            animation-delay: -0.18s;
-}
-.loading .lds-roller div:nth-child(5):after {
-    top: 71px;
-    left: 32px;
-}
-.loading .lds-roller div:nth-child(6) {
-    -webkit-animation-delay: -0.216s;
-            animation-delay: -0.216s;
-}
-.loading .lds-roller div:nth-child(6):after {
-    top: 68px;
-    left: 24px;
-}
-.loading .lds-roller div:nth-child(7) {
-    -webkit-animation-delay: -0.252s;
-            animation-delay: -0.252s;
-}
-.loading .lds-roller div:nth-child(7):after {
-    top: 63px;
-    left: 17px;
-}
-.loading .lds-roller div:nth-child(8) {
-    -webkit-animation-delay: -0.288s;
-            animation-delay: -0.288s;
-}
-.loading .lds-roller div:nth-child(8):after {
-    top: 56px;
-    left: 12px;
-}
-@-webkit-keyframes lds-roller {
-    0% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-    }
-}
-@keyframes lds-roller {
-    0% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-    }
-}
+
 
 /* :: Navbar */
 .nav-bar.active{
@@ -1247,6 +1121,7 @@ p {
 	bottom: 40px;
 }
 
+
 /* :: Features */
 .features{
     margin-top: -30px;
@@ -1338,6 +1213,7 @@ p {
 .features.home-3 .all-features-item .features-item.three{
 	border-bottom-right-radius: 5px;
 }
+
 
 /* :: About US */
 .about-us .about-us-img-box{
@@ -4513,3 +4389,102 @@ p {
     color: #555;
   }
  /* ---------------------------------------------- About card end -----------------------------------------------  */
+
+ /* ------------------------------------------------- Service card ------------------------------------------------ */
+
+ .service-card {
+    overflow: hidden;
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Clean white background */
+}
+
+.service-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+    transition: transform 0.3s;
+    border-top-left-radius: 15px; /* Match card radius */
+    border-top-right-radius: 15px; /* Match card radius */
+    width: 100%; /* Ensure the image fits the card width */
+    height: 250px; /* Set a balanced height */
+    object-fit: cover; /* Prevent stretching or cutting */
+    padding: 10px;
+}
+
+.service-card:hover img {
+    transform: scale(1.1);
+}
+
+.service-card .card-body {
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.service-card h5 {
+    font-size: 1.25rem; /* Professional heading size */
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 10px;
+    text-align: center; /* Centered headings */
+}
+
+.service-card p {
+    font-size: 0.95rem; /* Slightly smaller font size for professionalism */
+    color: #555; /* Muted color for text */
+    
+    margin-bottom: 15px;
+}
+
+.service-card ul {
+    padding-left: 20px; /* Space for list alignment */
+}
+
+.service-card ul li {
+    color: #444444;
+    margin-bottom: 5px;
+}
+
+.service-card h5 {
+    font-size: 1.2rem; /* Increase font size for emphasis */
+    font-weight: bold; /* Make the title bold */
+    color: #333; /* Darker color for better readability */
+    margin-top: 10px; /* Add spacing at the top */
+    margin-bottom: 10px; /* Add spacing at the bottom */
+    text-align: center; /* Center-align the title */
+    padding: 10px 0; /* Add padding for a balanced look */
+    background-color: #f8f9fa; /* Optional: light background for title section */
+    border-radius: 10px; /* Rounded edges for title section */
+}
+
+
+.service-card .card-body {
+    max-height: 250px; /* Limit the height to enable scrolling */
+    overflow-y: auto; /* Add vertical scrolling */
+    padding: 20px; /* Ensure consistent spacing */
+}
+
+/* Custom Scrollbar Styling */
+.service-card .card-body::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.service-card .card-body::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background for the track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+.service-card .card-body::-webkit-scrollbar-thumb {
+    background: #f57009; /* Primary color for the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.service-card .card-body::-webkit-scrollbar-thumb:hover {
+    background: #cc4e07; /* Slightly darker color on hover */
+}
+
+/* ------------------------------ services ------------------------ */
+
+.py-50{
+    margin-top: 50px;
+}
